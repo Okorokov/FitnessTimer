@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DetailTimerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibClose"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:padding="10dp"
+            android:src="@drawable/ic_close_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="00:00"
+            android:gravity="center"
+            android:textSize="25dp"/>
+        <ImageButton
+            android:id="@+id/ibSave"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:padding="10dp"
+            android:src="@drawable/ic_add_black_24dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"></View>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Название таймера"
+        android:inputType="text"
+        app:met_floatingLabel="highlight"
+        app:met_iconLeft="@drawable/sharp_schedule_black_48"
+        app:met_iconPadding="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"></View>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etPreparation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:hint="Подготовка, с"
+                        android:inputType="numberDecimal"
+                        android:text="10"
+                        app:met_floatingLabel="highlight"
+                        app:met_iconLeft="@drawable/sharp_directions_walk_black_48"
+                        app:met_iconPadding="0dp"
+                        app:met_maxCharacters="4"
+                        app:met_minCharacters="1" />
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:hint="Работа, с"
+                        android:inputType="numberDecimal"
+                        android:text="20"
+                        app:met_floatingLabel="highlight"
+                        app:met_iconLeft="@drawable/sharp_directions_run_black_48"
+                        app:met_iconPadding="0dp"
+                        app:met_maxCharacters="4"
+                        app:met_minCharacters="1" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etRest"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:hint="Отдых, с"
+                        android:inputType="numberDecimal"
+                        android:text="5"
+                        app:met_floatingLabel="highlight"
+                        app:met_iconLeft="@drawable/sharp_accessibility_black_48"
+                        app:met_iconPadding="0dp"
+                        app:met_maxCharacters="4"
+                        app:met_minCharacters="1" />
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etRepeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:hint="Циклы"
+                        android:inputType="numberDecimal"
+                        android:text="1"
+                        app:met_floatingLabel="highlight"
+                        app:met_iconLeft="@drawable/sharp_repeat_black_48"
+                        app:met_iconPadding="0dp"
+                        app:met_maxCharacters="4"
+                        app:met_minCharacters="1" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:hint="Сеты"
+                    android:inputType="numberDecimal"
+                    android:text="1"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/sharp_update_black_48"
+                    app:met_iconPadding="0dp"
+                    app:met_maxCharacters="4"
+                    app:met_minCharacters="1" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etRestSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:hint="Отдых между сетами, с"
+                    android:inputType="numberDecimal"
+                    android:text="1"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/sharp_airline_seat_recline_extra_black_48"
+                    app:met_iconPadding="0dp"
+                    app:met_maxCharacters="4"
+                    app:met_minCharacters="1" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etRestAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:hint="Успокоится, с"
+                        android:inputType="numberDecimal"
+                        android:text="2"
+                        app:met_floatingLabel="highlight"
+                        app:met_iconLeft="@drawable/sharp_airline_seat_flat_black_48"
+                        app:met_iconPadding="0dp"
+                        app:met_maxCharacters="4"
+                        app:met_minCharacters="1" />
+
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FitnessTimer</string>
+    <string name="action_settings">HISTORY</string>
+    <string name="title_name">Fitness Timer</string>
+</resources>
